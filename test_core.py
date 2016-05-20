@@ -186,7 +186,7 @@ class BaseLiveTestCase(LiveServerTestCase, UserTestBaseMixin):
         if os.environ.get('BROWSER') == 'phantomjs':
             browser = self.init_phantomjs()
         else:
-            browser = self.init_chrome()
+            browser = self.init_firefox()
         world.browsers.append(browser)
         return browser
 
